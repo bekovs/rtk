@@ -1,13 +1,79 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  background-color: #001d3d;
+  color: #fff;
+}
+
+.navbar__container {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.navbar__container ol {
+  list-style: none;
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__container ol li {
+  cursor: pointer;
+  transition: 150ms;
+}
+
+.navbar__container ol li:hover {
+  color: #14a4d4;
+}
+
+.posts__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 30px;
+}
+
+.post__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 250px;
+  border-radius: 5px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  margin: 20px 0;
+}
+
+.post__card img {
+  width: 300px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 0 0 5px 5px;
+}
+
+.post__card p {
+  margin: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar__container ol {
+    width: 60%;
+  }
 }
